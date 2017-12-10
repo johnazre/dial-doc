@@ -1,0 +1,16 @@
+[ignore]
+
+[include]
+.*/src/*.js
+
+[libs]
+
+[lints]
+all=warn
+untyped-type-import=error
+sketchy-null-bool=off
+
+[options]
+include_warnings=true
+
+[strict]
