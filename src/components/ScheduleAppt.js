@@ -1,11 +1,13 @@
 // @flow
-import { Container, Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap'
 import React, { Component } from 'react';
+import { Container, Row, Col, Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
 
 type State = {
   doctor: string,
   date: string,
-  time: string
+  time: string,
+  modal: boolean,
+  complaint: string
 }
 
 class ScheduleAppt extends Component<null, State> {
@@ -13,8 +15,12 @@ class ScheduleAppt extends Component<null, State> {
   state = {
     doctor: '',
     date: '',
-    time: ''
+    time: '',
+    modal: false,
+    complaint: ''
   }
+
+  toggleModal = () => this.setState({modal: !this.state.modal})
 
   render () {
     return (
@@ -22,9 +28,32 @@ class ScheduleAppt extends Component<null, State> {
         <Row>
           <Col className="text-center" style={{marginTop: 40}}>
             <h2>Speak with a physician now</h2>
-            <Button>Click here</Button>
+            <Button onClick={this.toggleModal}>Click here</Button>
           </Col>
         </Row>
+        <Modal
+          isOpen={this.state.modal}
+          toggle={this.toggleModal}
+        >
+          <ModalHeader>Visit Details</ModalHeader>
+          <ModalBody>
+            <Form>
+              <FormGroup>
+                <Label for="cheifComplaint">What is your Cheif Complaint?</Label>
+                <Input
+                  type="text"
+                  id="cheifComplaint"
+                  placeholder="back hurts, nausea, etc."
+                  value={this.state.complaint}
+                  onChange={(e) => this.setState({complaint: e.target.value})}/>
+              </FormGroup>
+            </Form>
+          </ModalBody>
+          <ModalFooter>
+            <Button color="primary" onClick={this.toggleModal}>Do Something</Button>{' '}
+            <Button color="secondary" onClick={this.toggleModal}>Cancel</Button>
+          </ModalFooter>
+        </Modal>
         <Row>
           <Col className="text-center" style={{marginTop: 40}}>
             <h2>Schedule a future appointment</h2>
