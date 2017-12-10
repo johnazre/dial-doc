@@ -1,7 +1,7 @@
 // @flow
-import React from 'react';
-import { Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button } from 'reactstrap';
+import React, { Component } from 'react';
+import { Card, CardText, CardBody,
+  CardTitle, CardSubtitle, Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import Moment from 'react-moment'
 
 type Props = {
@@ -14,20 +14,41 @@ type Props = {
   }
 }
 
-const Appointment = (props: Props) => {
-  let { id, provider, appt_date } = props.appt;
-  return (
-    <div>
-      <Card>
-        <CardBody>
-          <CardTitle><Moment format="MM/DD/YYYY HH:mmA">{appt_date}</Moment></CardTitle>
-          <CardSubtitle>{provider[0].name}</CardSubtitle>
-          <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-          <Button>Button</Button>
-        </CardBody>
-      </Card>
-    </div>
-  );
+type State = {
+  modal: boolean
+}
+
+class Appointment extends Component<Props, State> {
+  state = { modal: false }
+
+  toggle = () => {
+    this.setState({ modal: !this.state.modal})
+  }
+
+  render() {
+    let { id, provider, appt_date } = this.props.appt;
+    let date = <Moment format="MM/DD/YYYY HH:mmA">{appt_date}</Moment>
+    return (
+      <div>
+        <Card>
+          <CardBody>
+            <CardTitle>{date}</CardTitle>
+            <CardSubtitle>{provider[0].name}</CardSubtitle>
+            <Button onClick={this.toggle}>View</Button>
+          </CardBody>
+        </Card>
+        <Modal isOpen={this.state.modal} toggle={this.toggle}>
+            <ModalHeader toggle={this.toggle}>{date} - {provider[0].name}</ModalHeader>
+            <ModalBody>
+              <p>Cheif Complaint: ...something</p>
+            </ModalBody>
+            <ModalFooter>
+              <Button color="secondary" onClick={this.toggle}>Close</Button>
+            </ModalFooter>
+          </Modal>
+      </div>
+    );
+  }
 };
 
 export default Appointment;
