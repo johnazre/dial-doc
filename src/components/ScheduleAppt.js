@@ -27,12 +27,22 @@ class ScheduleAppt extends Component<Props, State> {
     time: '',
     modal: false,
     complaint: '',
-    invalid: false
+    invalid: false,
+    modalInvalid: false
   }
 
   toggleModal = () => this.setState({modal: !this.state.modal})
 
   handleSubmit = (e) => {
+    e.preventDefault()
+    if(!this.state.date || !this.state.time || !this.state.provider_id){
+      this.setState({invalid: true})
+    } else {
+      this.props.addAppointment(this.state)
+    }
+  }
+
+  handleSubmitModal = (e) => {
     e.preventDefault()
     if(!this.state.date || !this.state.time || !this.state.provider_id){
       this.setState({invalid: true})
@@ -57,10 +67,11 @@ class ScheduleAppt extends Component<Props, State> {
         >
           <ModalHeader>Visit Details</ModalHeader>
           <ModalBody>
-            <Form>
+            <Form onSubmit={this.handleSubmitModal}>
               <FormGroup>
                 <Label for="cheifComplaint">What is your Cheif Complaint?</Label>
                 <Input
+                  valid={this.state.complaint.length < 3 ? false : true}
                   type="text"
                   id="cheifComplaint"
                   placeholder="back hurts, nausea, etc."
@@ -70,8 +81,13 @@ class ScheduleAppt extends Component<Props, State> {
             </Form>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.toggleModal}>Do Something</Button>{' '}
-            <Button color="secondary" onClick={this.toggleModal}>Cancel</Button>
+            <Button
+              type="submit"
+              color="primary"
+              onClick={this.toggleModal}
+              disabled={this.state.complaint.length < 3 ? true : false}
+            >Do Something</Button>{' '}
+            <Button color="secondary" onClick={this.toggleModal}>Close</Button>
           </ModalFooter>
         </Modal>
         <Row>
