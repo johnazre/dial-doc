@@ -4,8 +4,9 @@ import './App.css'
 import TopNav from './components/TopNav'
 import Login from './components/Login'
 import AccountInfo from './components/AccountInfo/AccountInfo'
-import Appointments from './components/Appointments'
+import PastAppointments from './components/PastAppointments'
 import Dashboard from './components/Dashboard'
+import ScheduleAppt from './components/ScheduleAppt'
 
 import {
   BrowserRouter as Router,
@@ -22,9 +23,10 @@ class App extends Component<null, null> {
           </div>
 
           <Route exact path="/" component={Login} />
-          <Route exact path="/account-info" component={AccountInfo} />
-          <Route exact path="/appointments" component={Appointments} />
           <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/appointments" component={PastAppointments} />
+          <Route exact path="/schedule" component={ScheduleAppt} />
+          <Route exact path="/account-info" component={AccountInfo} />
         </div>
       </Router>
     )

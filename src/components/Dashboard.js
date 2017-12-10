@@ -23,19 +23,19 @@ class Dashboard extends Component<Props, null> {
     }
     return (
       <Container>
-        <Row style={{marginTop: 200}}>
-          <Col style={colStyles}>
+        <Row style={{marginTop: '15vh'}}>
+          <Col style={colStyles} onClick={() => this.props.history.push('/account-info')}>
             <div className="text-center">View Past Appointments</div>
             <FontAwesome className="text-center" name='book' style={{ display: 'inline-block', width: '100%', fontSize: 220, marginTop: 30 }} />
           </Col>
-          <Col style={colStyles}>
+          <Col style={colStyles} onClick={() => this.props.history.push('/appointments')}>
             <div className="text-center">See your doctor or schedule an appointment</div>
             <FontAwesome className="text-center" name='calendar' style={{ display: 'inline-block', width: '100%', fontSize: 220, marginTop: 30 }} />
           </Col>
-          <Col  style={colStyles}>
+          <Col  style={colStyles} onClick={() => this.props.history.push('/account-info')}>
             <div
             className="text-center"
-            onClick={() => this.props.history.push('/account-info')}
+
             >View/Change Account Information</div>
           <FontAwesome className="text-center" name='user' style={{ display: 'inline-block', width: '100%', fontSize: 220, marginTop: 30 }} />
           </Col>
