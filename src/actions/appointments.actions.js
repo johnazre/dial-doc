@@ -19,7 +19,7 @@ export const getAllAppointments = () => {
 export const addAppointment = (appt) => {
   let newAppt = {
     patient_id: 1,
-    provider_id: parseInt(appt.provider_id),
+    provider_id: parseInt(appt.provider_id, 10),
     appt_date: `${appt.date} ${appt.time}`
   }
   console.log('appt', newAppt)

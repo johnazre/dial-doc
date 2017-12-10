@@ -4,7 +4,7 @@ import './App.css'
 import TopNav from './components/TopNav'
 import Login from './components/Login'
 import AccountInfo from './components/AccountInfo/AccountInfo'
-import PastAppointments from './components/PastAppointments'
+import PastAppointmentsMain from './components/PastAppointments/Main'
 import Dashboard from './components/Dashboard'
 import ScheduleAppt from './components/ScheduleAppt'
 
@@ -44,7 +44,7 @@ class App extends Component<Props, null> {
 
           <Route exact path="/" component={Login} />
           <Route exact path="/dashboard" component={Dashboard} />
-          <Route exact path="/appointments" component={PastAppointments} />
+          <Route exact path="/appointments" component={PastAppointmentsMain} />
           <Route exact path="/schedule" component={ScheduleAppt} />
           <Route exact path="/account-info" component={AccountInfo} />
         </div>
