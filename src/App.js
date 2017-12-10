@@ -8,12 +8,32 @@ import PastAppointments from './components/PastAppointments'
 import Dashboard from './components/Dashboard'
 import ScheduleAppt from './components/ScheduleAppt'
 
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { getAllProviders } from './actions/providers.actions'
+import { getAllAppointments } from './actions/appointments.actions'
+import { getAllPatients } from './actions/patients.actions'
+
 import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom'
 
-class App extends Component<null, null> {
+type Props = {
+  getAllPatients: Function,
+  getAllProviders: Function,
+  getAllAppointments: Function
+}
+
+class App extends Component<Props, null> {
+
+  componentDidMount(): void {
+    let { getAllPatients, getAllProviders, getAllAppointments } = this.props
+    getAllPatients()
+    getAllProviders()
+    getAllAppointments()
+  }
+
   render() {
     return (
       <Router>
@@ -33,4 +53,12 @@ class App extends Component<null, null> {
   }
 }
 
-export default App
+function mapDispatchToProps(dispatch) {
+  return {
+    getAllPatients: bindActionCreators(getAllPatients, dispatch),
+    getAllProviders: bindActionCreators(getAllProviders, dispatch),
+    getAllAppointments: bindActionCreators(getAllAppointments, dispatch),
+  }
+}
+
+export default connect(null, mapDispatchToProps)(App)
