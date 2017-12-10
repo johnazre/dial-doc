@@ -1,19 +1,27 @@
 // @flow
 import React, { Component } from 'react';
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { addAppointment } from '../actions/appointments.actions'
+
 
 type State = {
-  doctor: string,
+  provider_id: string,
   date: string,
   time: string,
   modal: boolean,
   complaint: string
 }
 
-class ScheduleAppt extends Component<null, State> {
+type Props = {
+  providers: any[]
+}
+
+class ScheduleAppt extends Component<Props, State> {
 
   state = {
-    doctor: '',
+    provider_id: '',
     date: '',
     time: '',
     modal: false,
@@ -22,7 +30,13 @@ class ScheduleAppt extends Component<null, State> {
 
   toggleModal = () => this.setState({modal: !this.state.modal})
 
+  handleSubmit = (e) => {
+    e.preventDefault()
+    this.props.addAppointment(this.state)
+  }
+
   render () {
+    let providersOptions = this.props.providers.map(provider => <option key={provider.id} value={provider.id}>{provider.name}</option>)
     return (
       <Container>
         <Row>
@@ -61,22 +75,21 @@ class ScheduleAppt extends Component<null, State> {
         </Row>
         <Row>
           <Col className="text-center" lg={{size: 4, offset: 4}}>
-            <Form>
+            <Form onSubmit={this.handleSubmit}>
+              {/*Provider Select*/}
               <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                 <Label for="exampleSelect">Select a doctor: </Label>
                 <Input
                   type="select"
                   id="exampleSelect"
                   value={this.state.doctor}
-                  onChange={(e) => this.setState({doctor: e.target.value})}
+                  onChange={(e) => this.setState({provider_id: e.target.value})}
                 >
-                  <option value="1">Dr. John Medina</option>
-                  <option value="2">Dr. Kimberly Valdez</option>
-                  <option value="3">Dr. David Smith</option>
-                  <option value="4">Dr. Jack Davidson</option>
-                  <option value="5">Dr. Wendy Williams</option>
+                  <option>Select Your Physician</option>
+                  {providersOptions}
                 </Input>
               </FormGroup>
+              {/*Appointment Date*/}
               <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                 <Label for="appt-date">Choose a Date</Label>
                 <Input
@@ -86,6 +99,7 @@ class ScheduleAppt extends Component<null, State> {
                   onChange={(e) => this.setState({date: e.target.value})}
                 />
               </FormGroup>
+              {/*Appointment Time*/}
               <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                 <Label for="appt-time">Choose a Time</Label>
                 <Input
@@ -95,7 +109,7 @@ class ScheduleAppt extends Component<null, State> {
                   onChange={(e) => this.setState({time: e.target.value})}
                 />
               </FormGroup>
-              <Button style={{marginTop: 15}}>Submit</Button>
+              <Button type="submit" style={{marginTop: 15}}>Submit</Button>
             </Form>
           </Col>
         </Row>
@@ -103,4 +117,16 @@ class ScheduleAppt extends Component<null, State> {
     )
   }
 }
-export default ScheduleAppt;
+function mapDispatchToProps(dispatch) {
+  return {
+    addAppointment: bindActionCreators(addAppointment, dispatch),
+  }
+}
+
+function mapStateToProps(state, props) {
+  return {
+    providers: state.providers
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ScheduleAppt)
