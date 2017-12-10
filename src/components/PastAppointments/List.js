@@ -17,7 +17,6 @@ type Props = {
 
 class PastAppointmentsList extends Component<Props, null> {
   render () {
-    console.log('appts', this.props);
     let apptList = this.props.appts.map(appt => {
       return (
         <Col key={appt.id} md="4" style={{marginTop: 20}}>
@@ -26,9 +25,12 @@ class PastAppointmentsList extends Component<Props, null> {
       )
     });
     return (
-      <Row>
-        {apptList}
-      </Row>
+      <div>
+        <h2>Past Appointments</h2>
+        <Row>
+          {apptList}
+        </Row>
+      </div>
     )
   }
 }

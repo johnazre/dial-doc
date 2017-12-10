@@ -1,7 +1,6 @@
 // @flow
 import React, { Component } from 'react';
-import { Card, CardText, CardBody,
-  CardTitle, CardSubtitle, Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Card, CardBody, CardTitle, CardSubtitle, Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import Moment from 'react-moment'
 
 type Props = {
@@ -26,7 +25,7 @@ class Appointment extends Component<Props, State> {
   }
 
   render() {
-    let { id, provider, appt_date } = this.props.appt;
+    let { provider, appt_date } = this.props.appt;
     let date = <Moment format="MM/DD/YYYY HH:mmA">{appt_date}</Moment>
     return (
       <div>
