@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import './App.css'
 import TopNav from './components/TopNav'
 import Login from './components/Login'
-import AccountInfo from './components/AccountInfo'
+import AccountInfo from './components/AccountInfo/AccountInfo'
 import Appointments from './components/Appointments'
 import Dashboard from './components/Dashboard'
 
