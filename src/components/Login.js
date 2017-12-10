@@ -1,8 +1,14 @@
-import React from 'react';
+// @flow
+import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, Container, Row, Col } from 'reactstrap';
 
+type Props = {
+  history: {
+    push: Function
+  }
+}
 
-class Login extends React.Component {
+class Login extends Component<Props, null> {
   render() {
     return (
       <Container>

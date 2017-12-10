@@ -1,4 +1,5 @@
-import React from 'react';
+// @flow
+import React, { Component } from 'react';
 import {
   Collapse,
   Navbar,
@@ -9,14 +10,15 @@ import {
   // NavLink
 } from 'reactstrap';
 
-class TopNav extends React.Component {
-  constructor(props) {
-    super(props);
+type State = {
+  isOpen: boolean
+}
 
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      isOpen: false
-    };
+type Props = {}
+
+class TopNav extends Component<Props, State> {
+  state = {
+    isOpen: false
   }
   toggle() {
     this.setState({
