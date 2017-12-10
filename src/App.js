@@ -12,7 +12,7 @@ import {
   Route
 } from 'react-router-dom'
 
-class App extends Component {
+class App extends Component<null, null> {
   render() {
     return (
       <Router>
