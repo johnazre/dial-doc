@@ -9,7 +9,9 @@ type Props = {
     provider_id: number,
     patient_id: number,
     appt_date: string,
-    provider: any[]
+    provider: any[],
+    chief_complaint: string,
+    illness_description: string
   }
 }
 
@@ -25,7 +27,7 @@ class Appointment extends Component<Props, State> {
   }
 
   render() {
-    let { provider, appt_date } = this.props.appt;
+    let { provider, appt_date, illness_description, chief_complaint } = this.props.appt;
     let date = <Moment format="MM/DD/YYYY HH:mmA">{appt_date}</Moment>
     return (
       <div>
@@ -39,7 +41,9 @@ class Appointment extends Component<Props, State> {
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
             <ModalHeader toggle={this.toggle}>{date} - {provider[0].name}</ModalHeader>
             <ModalBody>
-              <p>Cheif Complaint: ...something</p>
+              <p>Chief Complaint: {chief_complaint}</p>
+              <hr/>
+              <p>Illness Description: {illness_description}</p>
             </ModalBody>
             <ModalFooter>
               <Button color="secondary" onClick={this.toggle}>Close</Button>
