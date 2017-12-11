@@ -1,4 +1,5 @@
 import React from 'react'
+import {Row, Col} from 'reactstrap'
 import './ChatArea.css'
 
 const ChatArea = (props) => {
@@ -6,16 +7,21 @@ const ChatArea = (props) => {
     <div className="chat">
       <div className="chat-history">
         <ul>
-          <li className="clearfix">
-            <div className="message-data align-right">
-              <span className="message-data-time" >10:10 AM, Today</span> &nbsp; &nbsp;
-              <span className="message-data-name" >Olia</span> <i className="fa fa-circle me"></i>
-
-            </div>
-            <div className="message other-message float-right">
-              Hi Vincent, how are you? How is the project coming along?
-            </div>
-          </li>
+            <Row>
+              <Col className="message-data text-right">
+                <Row>
+                  <Col md={{size: 8, offset: 3}}>
+                    <span className="message-data-time" >10:10 AM, Today</span> &nbsp; &nbsp;
+                    <span className="message-data-name" >Olia</span> <i className="fa fa-circle me"></i>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+            <Row>
+              <div className="message other-message float-right">
+                Hi Vincent, how are you? How is the project coming along?
+              </div>
+            </Row>
 
           <li>
             <div className="message-data">
