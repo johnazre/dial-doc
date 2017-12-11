@@ -11,14 +11,14 @@ const ChatArea = (props) => {
               <Col className="message-data text-right">
                 <Row>
                   <Col md={{size: 8, offset: 3}}>
-                    <span className="message-data-time" >10:10 AM, Today</span> &nbsp; &nbsp;
-                    <span className="message-data-name" >Olia</span> <i className="fa fa-circle me"></i>
+                    <span className="message-data-time">10:10 AM, Today</span> &nbsp; &nbsp;
+                    <span className="message-data-name">Olia</span> <i className="fa fa-circle me"></i>
                   </Col>
                 </Row>
               </Col>
             </Row>
             <Row>
-              <div className="message other-message float-right">
+              <div className="message other-message">
                 Hi Vincent, how are you? How is the project coming along?
               </div>
             </Row>
