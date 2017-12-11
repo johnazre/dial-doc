@@ -18,11 +18,21 @@ export const getAllAppointments = () => {
   }
 }
 
-export const addAppointment = (appt) => {
-  let newAppt = {
-    patient_id: 1,
-    provider_id: parseInt(appt.provider_id, 10),
-    appt_date: `${appt.date} ${appt.time}`
+export const addAppointment = (appt, when) => {
+  let newAppt;
+
+  if(when === "future") {
+    newAppt = {
+      patient_id: 1,
+      provider_id: parseInt(appt.provider_id, 10),
+      appt_date: `${appt.date} ${appt.time}`
+    }
+  } else {
+    newAppt = {
+      patient_id: 1,
+      provider_id: 1,
+      appt_date: new Date()
+    }
   }
   return async (dispatch) => {
     dispatch({type: ADD_APPOINTMENT_PENDING})

@@ -17,7 +17,8 @@ type State = {
 
 type Props = {
   providers: any[],
-  addAppointment: Function
+  addAppointment: Function,
+  history: Object
 }
 
 class ScheduleAppt extends Component<Props, State> {
@@ -47,8 +48,13 @@ class ScheduleAppt extends Component<Props, State> {
     if(!this.state.date || !this.state.time || !this.state.provider_id){
       this.setState({invalid: true})
     } else {
-      this.props.addAppointment(this.state)
+      this.props.addAppointment(this.state, 'future')
     }
+  }
+
+  startAppointment = () => {
+    // this.props.addAppointment(this.state.complaint, 'now')
+    this.props.history.push('/conference')
   }
 
   render () {
@@ -69,11 +75,11 @@ class ScheduleAppt extends Component<Props, State> {
           <ModalBody>
             <Form onSubmit={this.handleSubmitModal}>
               <FormGroup>
-                <Label for="cheifComplaint">What is your Cheif Complaint?</Label>
+                <Label for="chiefComplaint">What is your Chief Complaint?</Label>
                 <Input
                   valid={this.state.complaint.length < 3 ? false : true}
                   type="text"
-                  id="cheifComplaint"
+                  id="chiefComplaint"
                   placeholder="back hurts, nausea, etc."
                   value={this.state.complaint}
                   onChange={(e) => this.setState({complaint: e.target.value})}/>
@@ -84,7 +90,7 @@ class ScheduleAppt extends Component<Props, State> {
             <Button
               type="submit"
               color="primary"
-              onClick={this.toggleModal}
+              onClick={this.startAppointment}
               disabled={this.state.complaint.length < 3 ? true : false}
             >Do Something</Button>{' '}
             <Button color="secondary" onClick={this.toggleModal}>Close</Button>
