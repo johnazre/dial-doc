@@ -31,7 +31,7 @@ class PastAppointmentsList extends Component<Props, null> {
     });
     return (
       <div>
-        <h2>Past Appointments</h2>
+        <h2 style={{marginTop: 20}}>Past Appointments</h2>
         <Row>
           <Col>
             <FormGroup>
