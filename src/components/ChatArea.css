@@ -8,20 +8,6 @@ ul > li {
   list-style-type: none;
 }
 
-body {
-  background: #C5DDEB;
-  font: 14px/20px "Lato", Arial, sans-serif;
-  padding: 40px 0;
-  color: white;
-}
-
-.container {
-  margin: 0 auto;
-  width: 750px;
-  background: #444753;
-  border-radius: 5px;
-}
-
 .chat {
   background: #F2F5F8;
   border-top-right-radius: 5px;
