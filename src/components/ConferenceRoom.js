@@ -9,7 +9,7 @@ import ChatArea from './ChatArea'
 
 const ConferenceRoom = (props) => {
   let noGutter = {paddingLeft: 2, paddingRight: 2}
-  let chatAreaStyle = { border: '1px solid black', minHeight: '30vh', paddingLeft: 0, paddingRight: 0}
+  let chatAreaStyle = { borderTop: '2px solid black', minHeight: '30vh', paddingLeft: 0, paddingRight: 0}
   return (
     <div>
       <Row>
