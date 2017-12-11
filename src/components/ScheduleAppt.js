@@ -16,7 +16,8 @@ type State = {
 }
 
 type Props = {
-  providers: any[]
+  providers: any[],
+  addAppointment: Function
 }
 
 class ScheduleAppt extends Component<Props, State> {
@@ -28,7 +29,6 @@ class ScheduleAppt extends Component<Props, State> {
     modal: false,
     complaint: '',
     invalid: false,
-    modalInvalid: false
   }
 
   toggleModal = () => this.setState({modal: !this.state.modal})
