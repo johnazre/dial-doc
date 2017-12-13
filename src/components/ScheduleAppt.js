@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from 'react';
-import { Container, Row, Col, Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
+import { Container, Row, Col, Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter, Alert } from 'reactstrap'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { addAppointment } from '../actions/appointments.actions'
@@ -11,11 +11,14 @@ type State = {
   date: string,
   time: string,
   modal: boolean,
-  complaint: string
+  complaint: string,
+  invalid: boolean
 }
 
 type Props = {
-  providers: any[]
+  providers: any[],
+  addAppointment: Function,
+  history: Object
 }
 
 class ScheduleAppt extends Component<Props, State> {
@@ -25,14 +28,33 @@ class ScheduleAppt extends Component<Props, State> {
     date: '',
     time: '',
     modal: false,
-    complaint: ''
+    complaint: '',
+    invalid: false,
   }
 
   toggleModal = () => this.setState({modal: !this.state.modal})
 
   handleSubmit = (e) => {
     e.preventDefault()
-    this.props.addAppointment(this.state)
+    if(!this.state.date || !this.state.time || !this.state.provider_id){
+      this.setState({invalid: true})
+    } else {
+      this.props.addAppointment(this.state)
+    }
+  }
+
+  handleSubmitModal = (e) => {
+    e.preventDefault()
+    if(!this.state.date || !this.state.time || !this.state.provider_id){
+      this.setState({invalid: true})
+    } else {
+      this.props.addAppointment(this.state, 'future')
+    }
+  }
+
+  startAppointment = () => {
+    // this.props.addAppointment(this.state.complaint, 'now')
+    this.props.history.push('/conference')
   }
 
   render () {
@@ -51,12 +73,13 @@ class ScheduleAppt extends Component<Props, State> {
         >
           <ModalHeader>Visit Details</ModalHeader>
           <ModalBody>
-            <Form>
+            <Form onSubmit={this.handleSubmitModal}>
               <FormGroup>
-                <Label for="cheifComplaint">What is your Cheif Complaint?</Label>
+                <Label for="chiefComplaint">What is your Chief Complaint?</Label>
                 <Input
+                  valid={this.state.complaint.length < 3 ? false : true}
                   type="text"
-                  id="cheifComplaint"
+                  id="chiefComplaint"
                   placeholder="back hurts, nausea, etc."
                   value={this.state.complaint}
                   onChange={(e) => this.setState({complaint: e.target.value})}/>
@@ -64,8 +87,13 @@ class ScheduleAppt extends Component<Props, State> {
             </Form>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.toggleModal}>Do Something</Button>{' '}
-            <Button color="secondary" onClick={this.toggleModal}>Cancel</Button>
+            <Button
+              type="submit"
+              color="primary"
+              onClick={this.startAppointment}
+              disabled={this.state.complaint.length < 3 ? true : false}
+            >Do Something</Button>{' '}
+            <Button color="secondary" onClick={this.toggleModal}>Close</Button>
           </ModalFooter>
         </Modal>
         <Row>
@@ -80,9 +108,10 @@ class ScheduleAppt extends Component<Props, State> {
               <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                 <Label for="exampleSelect">Select a doctor: </Label>
                 <Input
+                  valid={!this.state.provider_id ? false : true}
                   type="select"
                   id="exampleSelect"
-                  value={this.state.doctor}
+                  value={this.state.provider_id}
                   onChange={(e) => this.setState({provider_id: e.target.value})}
                 >
                   <option>Select Your Physician</option>
@@ -93,6 +122,7 @@ class ScheduleAppt extends Component<Props, State> {
               <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                 <Label for="appt-date">Choose a Date</Label>
                 <Input
+                  valid={!this.state.date ? false : true}
                   type="date"
                   id="appt-date"
                   value={this.state.date}
@@ -103,6 +133,7 @@ class ScheduleAppt extends Component<Props, State> {
               <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                 <Label for="appt-time">Choose a Time</Label>
                 <Input
+                  valid={!this.state.time ? false : true}
                   type="time"
                   id="appt-time"
                   value={this.state.time}
@@ -111,6 +142,11 @@ class ScheduleAppt extends Component<Props, State> {
               </FormGroup>
               <Button type="submit" style={{marginTop: 15}}>Submit</Button>
             </Form>
+            {this.state.invalid ?
+              <Alert color="danger">
+                Something is wrong with what you are trying to submit. Make sure that all of the fields are filled out!
+              </Alert>
+              : null}
           </Col>
         </Row>
       </Container>

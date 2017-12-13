@@ -1,8 +1,10 @@
 // @flow
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { sortAppts } from '../../actions/appointments.actions'
 import Appointment from './Appointment'
-import { Row, Col } from 'reactstrap'
+import { Row, Col, FormGroup, Input, Label } from 'reactstrap'
 
 type Appt = {
   id: number,
@@ -12,12 +14,14 @@ type Appt = {
 }
 
 type Props = {
-  appts: Appt[]
+  appts: Appt[],
+  sortAppts: Function
 }
 
+
 class PastAppointmentsList extends Component<Props, null> {
+
   render () {
-    console.log('appts', this.props);
     let apptList = this.props.appts.map(appt => {
       return (
         <Col key={appt.id} md="4" style={{marginTop: 20}}>
@@ -26,9 +30,27 @@ class PastAppointmentsList extends Component<Props, null> {
       )
     });
     return (
-      <Row>
-        {apptList}
-      </Row>
+      <div>
+        <h2 style={{marginTop: 20}}>Past Appointments</h2>
+        <Row>
+          <Col>
+            <FormGroup>
+              <Label for="sortAppts">Sort By:</Label>
+              <Input
+                type="select"
+                id="sortAppts"
+                onChange={(e) => this.props.sortAppts(e.target.value)}
+              >
+                <option value="desc">Newest to Oldest</option>
+                <option value="asc">Oldest to Newest</option>
+              </Input>
+            </FormGroup>
+          </Col>
+        </Row>
+        <Row>
+          {apptList}
+        </Row>
+      </div>
     )
   }
 }
@@ -39,4 +61,10 @@ function mapStateToProps(state, props) {
   }
 }
 
-export default connect(mapStateToProps, null)(PastAppointmentsList)
+function mapDispatchToProps(dispatch) {
+  return {
+    sortAppts: bindActionCreators(sortAppts, dispatch),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(PastAppointmentsList)

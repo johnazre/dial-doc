@@ -7,6 +7,7 @@ import AccountInfo from './components/AccountInfo/AccountInfo'
 import PastAppointmentsMain from './components/PastAppointments/Main'
 import Dashboard from './components/Dashboard'
 import ScheduleAppt from './components/ScheduleAppt'
+import ConferenceRoom from './components/ConferenceRoom'
 
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
@@ -47,6 +48,7 @@ class App extends Component<Props, null> {
           <Route exact path="/appointments" component={PastAppointmentsMain} />
           <Route exact path="/schedule" component={ScheduleAppt} />
           <Route exact path="/account-info" component={AccountInfo} />
+          <Route exact path="/conference" component={ConferenceRoom} />
         </div>
       </Router>
     )
