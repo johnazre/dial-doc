@@ -26,7 +26,7 @@ type Props = {
   getAllAppointments: Function
 }
 
-class App extends Component<Props, null> {
+export class App extends Component<Props, null> {
 
   componentDidMount(): void {
     let { getAllPatients, getAllProviders, getAllAppointments } = this.props
