@@ -29,7 +29,7 @@ class TopNav extends Component<Props, State> {
     return (
       <div>
         <Navbar color="primary" dark expand="md">
-          <NavbarBrand href="/">DialDoc</NavbarBrand>
+          <NavbarBrand href="/">UniviDoc</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

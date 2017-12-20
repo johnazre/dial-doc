@@ -35,18 +35,18 @@ class Appointment extends Component<Props, State> {
           <CardBody>
             <CardTitle>{date}</CardTitle>
             <CardSubtitle>{provider[0].name}</CardSubtitle>
-            <Button onClick={this.toggle}>View</Button>
+            <Button onClick={this.toggle}>Visualizar</Button>
           </CardBody>
         </Card>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
             <ModalHeader toggle={this.toggle}>{date} - {provider[0].name}</ModalHeader>
             <ModalBody>
-              <p>Chief Complaint: {chief_complaint}</p>
+              <p>Motivo de consulta: {chief_complaint}</p>
               <hr/>
-              <p>Illness Description: {illness_description}</p>
+              <p>Descripción de la enfermedad: {illness_description}</p>
             </ModalBody>
             <ModalFooter>
-              <Button color="secondary" onClick={this.toggle}>Close</Button>
+              <Button color="secondary" onClick={this.toggle}>Cerrar</Button>
             </ModalFooter>
           </Modal>
       </div>

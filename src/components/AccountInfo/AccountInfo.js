@@ -34,7 +34,7 @@ class AccountInfo extends Component {
               className={classnames({ active: this.state.activeTab === '1' })}
               onClick={() => this.toggle('1') }
             >
-              Personal
+              Perfil
             </NavLink>
           </NavItem>
           <NavItem>
@@ -42,7 +42,7 @@ class AccountInfo extends Component {
               className={classnames({ active: this.state.activeTab === '2' })}
               onClick={() => this.toggle('2') }
             >
-              Allergies
+              Alergias
             </NavLink>
           </NavItem>
           <NavItem>
@@ -50,7 +50,7 @@ class AccountInfo extends Component {
               className={classnames({ active: this.state.activeTab === '3' })}
               onClick={() => this.toggle('3') }
             >
-              Medications
+              Medicamentos
             </NavLink>
           </NavItem>
           <NavItem>
@@ -58,7 +58,7 @@ class AccountInfo extends Component {
               className={classnames({ active: this.state.activeTab === '4' })}
               onClick={() => this.toggle('4') }
             >
-              Medical History
+              Historia Médica
             </NavLink>
           </NavItem>
           <NavItem>
@@ -66,7 +66,7 @@ class AccountInfo extends Component {
               className={classnames({ active: this.state.activeTab === '5' })}
               onClick={() => this.toggle('5') }
             >
-              Procedures
+              Procedimientos
             </NavLink>
           </NavItem>
           <NavItem>
@@ -74,7 +74,7 @@ class AccountInfo extends Component {
               className={classnames({ active: this.state.activeTab === '6' })}
               onClick={() => this.toggle('6') }
             >
-              Family History
+              Historia Familiar
             </NavLink>
           </NavItem>
           <NavItem>
@@ -82,7 +82,7 @@ class AccountInfo extends Component {
               className={classnames({ active: this.state.activeTab === '7' })}
               onClick={() => this.toggle('7') }
             >
-              Questions
+              Preguntas
             </NavLink>
           </NavItem>
           <NavItem>
@@ -90,7 +90,7 @@ class AccountInfo extends Component {
               className={classnames({ active: this.state.activeTab === '8' })}
               onClick={() => this.toggle('8') }
             >
-              Pharmacy
+              Farmacias
             </NavLink>
           </NavItem>
           <NavItem>
@@ -98,7 +98,7 @@ class AccountInfo extends Component {
               className={classnames({ active: this.state.activeTab === '9' })}
               onClick={() => this.toggle('9') }
             >
-              Payment
+              Pagos
             </NavLink>
           </NavItem>
           <NavItem>
@@ -106,7 +106,7 @@ class AccountInfo extends Component {
               className={classnames({ active: this.state.activeTab === '10' })}
               onClick={() => this.toggle('10') }
             >
-              Settings
+              Configuración
             </NavLink>
           </NavItem>
         </Nav>
@@ -116,19 +116,19 @@ class AccountInfo extends Component {
               <Row>
                 <Col sm="4">
                   <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                    <Label for="firstname" className="mr-sm-2">First Name</Label>
+                    <Label for="firstname" className="mr-sm-2">Primer Nombre</Label>
                     <Input type="text" name="first" id="firstname" placeholder="" />
                   </FormGroup>
                 </Col>
                 <Col sm="4">
                   <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                    <Label for="middlename" className="mr-sm-2">Middle Name</Label>
+                    <Label for="middlename" className="mr-sm-2">Segundo Nombre</Label>
                     <Input type="text" name="middel" id="middlename" placeholder="" />
                   </FormGroup>
                 </Col>
                 <Col sm="4">
                   <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                    <Label for="lastname" className="mr-sm-2">Last Name</Label>
+                    <Label for="lastname" className="mr-sm-2">Apellidos</Label>
                     <Input type="text" name="last" id="lastname" placeholder="" />
                   </FormGroup>
                 </Col>
@@ -138,13 +138,13 @@ class AccountInfo extends Component {
               <Row>
                 <Col sm="6">
                   <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                    <Label for="dob" className="mr-sm-2">Date of Birth</Label>
+                    <Label for="dob" className="mr-sm-2">Fecha de Nacimiento</Label>
                     <Input type="text" name="dob" id="dob" placeholder="" />
                   </FormGroup>
                 </Col>
                 <Col sm="6">
                   <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                    <Label for="gender" className="mr-sm-2">Gender</Label>
+                    <Label for="gender" className="mr-sm-2">Sexo</Label>
                     <Input type="text" name="gender" id="gender" placeholder="" />
                   </FormGroup>
                 </Col>
@@ -154,13 +154,13 @@ class AccountInfo extends Component {
               <Row>
                 <Col sm="6">
                   <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                    <Label for="home" className="mr-sm-2">Home Phone</Label>
+                    <Label for="home" className="mr-sm-2">Teléfono de casa</Label>
                     <Input type="text" name="home" id="home" placeholder="" />
                   </FormGroup>
                 </Col>
                 <Col sm="6">
                   <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                    <Label for="mobile" className="mr-sm-2">Mobile Phone</Label>
+                    <Label for="mobile" className="mr-sm-2">Teléfono Celular</Label>
                     <Input type="text" name="mobile" id="mobile" placeholder="" />
                   </FormGroup>
                 </Col>
@@ -170,7 +170,7 @@ class AccountInfo extends Component {
               <Row>
                 <Col sm="12">
                   <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                    <Label for="address" className="mr-sm-2">Address</Label>
+                    <Label for="address" className="mr-sm-2">Dirección</Label>
                     <Input type="text" name="address" id="address" placeholder="" />
                   </FormGroup>
                 </Col>
@@ -180,19 +180,19 @@ class AccountInfo extends Component {
               <Row>
                 <Col sm="4">
                   <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                    <Label for="city" className="mr-sm-2">City</Label>
+                    <Label for="city" className="mr-sm-2">Ciudad</Label>
                     <Input type="text" name="city" id="city" placeholder="" />
                   </FormGroup>
                 </Col>
                 <Col sm="4">
                   <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                    <Label for="state" className="mr-sm-2">State</Label>
+                    <Label for="state" className="mr-sm-2">Estado</Label>
                     <Input type="text" name="state" id="state" placeholder="" />
                   </FormGroup>
                 </Col>
                 <Col sm="4">
                   <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                    <Label for="zipcode" className="mr-sm-2">Zip Code</Label>
+                    <Label for="zipcode" className="mr-sm-2">Código Postal</Label>
                     <Input type="text" name="zipcode" id="zipcode" placeholder="" />
                   </FormGroup>
                 </Col>
@@ -202,7 +202,7 @@ class AccountInfo extends Component {
                   <Button
                     style={{marginLeft: 35}}
                     onClick={() => this.setState({activeTab: '2'})}
-                  >Next Page</Button>
+                  >Siguiente Página</Button>
                 </Col>
               </Row>
             </Container>
@@ -213,109 +213,109 @@ class AccountInfo extends Component {
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Amoxicillin
+                    Amoxicilina
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Aspirin
+                    Aspirina
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Azithromycin (Zithromax)
+                    Azitromicina (Zithromax)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Clarithromycin (Biaxin)
+                    Claritromicina (Biaxin)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Ciprofloxacin
+                    Ciprofloxacino
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Codeine
+                    Codeína
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Doxycycline
+                    Doxiciclina
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Erythromycin
+                    Eritromicina
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Ibuprofen (Advil, Motrin, Midol)
+                    Ibuprofeno (Advil, Motrin, Midol)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Iodine
+                    Yodo
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Lidocaine
+                    Lidocaína
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Morphine
+                    Morfina
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Naproxen (Aleve)
+                    Naproxeno (Aleve)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Penicillin
+                    Penicilina
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Oxycodone (Percocet)
+                    Oxicodona (Percocet)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Sulfonamide
+                    Sulfonamida
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Tetracycline
+                    Tetraciclina
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Other
+                    Otro
                   </Label>
                 </Col>
               </Row>
@@ -324,7 +324,13 @@ class AccountInfo extends Component {
                   <Button
                     style={{marginLeft: 35}}
                     onClick={() => this.setState({activeTab: '3'})}
-                  >Next Page</Button>
+                  >Siguiente Página</Button>
+                </Col>
+                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+                  <Button
+                    style={{marginLeft: 35}}
+                    onClick={() => this.setState({activeTab: '1'})}
+                  >Página Anterior</Button>
                 </Col>
               </Row>
             </Container>
@@ -335,193 +341,193 @@ class AccountInfo extends Component {
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Antibiotics
+                    Antibióticos
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Cholesterol Medications
+                    Medicamentos para el colesterol
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Acid blocking Medications
+                    Medicamentos bloqueadores de ácido
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Immuno-suppressant Medication (Cyclosporin)
+                    Medicamentos inmunosupressores (Ciclosporina)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Anti-depressants
+                    Antidepresivos
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Immuno-suppressant Medication (Tacrolimus)
+                    Medicamentos inmunosupresores (Tacrolimus)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Anti-arrhythmic (Amiodarone)
+                    Anti arrítmicos (Amiodarona)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Immuno-suppressant Medication (Prednisone)
+                    Medicamentos inmunosupresores (Prednisona)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Anti-arrhythmic (Other)
+                    Anti arrítmicos (otros)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Immuno-suppressant Medication (Other)
+                    Medicamentos inmunosupresores (otros)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Anti-pyschotic
+                    Anti psicóticos
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Diuretics (Lasix)
+                    Diuréticos (Lasix)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Attention Deficit Disorder Medications
+                    Medicamentos de Desorden de Déficit de Atención
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Diuretics (Hydrochlorothiazide)
+                    Diuréticos (Hidroclorotiazida)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Asthma Medications
+                    Medicamentos para Asma
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Diuretis (Other)
+                    Diuréticos (otros)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Allergy Medications
+                    Medicamentos para Alergía
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Sleep Medications
+                    Medicamentos para dormir
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Birth Control
+                    Anticonceptivos
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Pain Medications (Hydrocodone)
+                    Medicamentos para el dolor (Hidrocodona)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Blood Thinner (Warfarin)
+                    Diluyente de la sangre (Warfarina)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Pain Medications (Tramadol)
+                    Medicamentos para el dolor (Tramadol)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Blood Thinner (Xeralto)
+                    Diluyente de la sangre (Xarelto)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Pain Medications (Ibuprofen)
+                    Medicamentos para el dolor (Ibuprofeno)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Blood Thinner (Paradaxa)
+                    Diluyente de la sangre (Pradaxa)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Pain Medications (Naproxen)
+                    Medicamentos para el dolor (Naproxeno)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Blood Thinner (Aspirine)
+                    Diluyente de la sangre (Aspirina)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Pain Medications (Other)
+                    Medicamentos para el dolor (otro)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Blood Thinner (Other)
+                    Diluyente de la sangre (otro)
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Supplements
+                    Suplementos
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Blood Pressure Medications
+                    Medicamentos para la presión sanguínea
                   </Label>
                 </Col>
                 <Col sm="6">
                 <Label check>
                   <Input type="checkbox" />{' '}
-                  Other
+                  Otros
                 </Label>
                 </Col>
               </Row>
@@ -530,7 +536,13 @@ class AccountInfo extends Component {
                   <Button
                     style={{marginLeft: 35}}
                     onClick={() => this.setState({activeTab: '4'})}
-                  >Next Page</Button>
+                  >Siguiente Página</Button>
+                </Col>
+                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+                  <Button
+                    style={{marginLeft: 35}}
+                    onClick={() => this.setState({activeTab: '2'})}
+                  >Página Anterior</Button>
                 </Col>
               </Row>
             </Container>
@@ -541,31 +553,31 @@ class AccountInfo extends Component {
                 <Col sm="6">
                 <Label check>
                   <Input type="checkbox" />{' '}
-                  Acid reflux
+                  Reflujo ácido
                 </Label>
                 </Col>
                 <Col sm="6">
                 <Label check>
                   <Input type="checkbox" />{' '}
-                  Asthma
+                  Asma
                 </Label>
                 </Col>
                 <Col sm="6">
                 <Label check>
                   <Input type="checkbox" />{' '}
-                  Blood clots
+                  Coágulos de Sangre
                 </Label>
                 </Col>
                 <Col sm="6">
                 <Label check>
                   <Input type="checkbox" />{' '}
-                  Cancer
+                  Cáncer
                 </Label>
                 </Col>
                 <Col sm="6">
                 <Label check>
                   <Input type="checkbox" />{' '}
-                  Coronary artery disease (cad)
+                  Enfermedad de la arteria coronaria
                 </Label>
                 </Col>
                 <Col sm="6">
@@ -577,50 +589,64 @@ class AccountInfo extends Component {
                 <Col sm="6">
                 <Label check>
                   <Input type="checkbox" />{' '}
-                  Seizures
+                  Epilepsia
                 </Label>
                 </Col>
                 <Col sm="6">
                 <Label check>
                   <Input type="checkbox" />{' '}
-                  Heart attack
+                  Ataque al corazón
                 </Label>
                 </Col>
                 <Col sm="6">
                 <Label check>
                   <Input type="checkbox" />{' '}
-                  Hypertension
+                  Hipertensión
                 </Label>
                 </Col>
                 <Col sm="6">
                 <Label check>
                   <Input type="checkbox" />{' '}
-                  Kidney disease
+                  Enfermedades del riñón
                 </Label>
                 </Col>
                 <Col sm="6">
                 <Label check>
                   <Input type="checkbox" />{' '}
-                  Stomach ulcer
+                  Úlcera estomacal
                 </Label>
                 </Col>
                 <Col sm="6">
                 <Label check>
                   <Input type="checkbox" />{' '}
-                  Stroke
+                  Infarto
                 </Label>
                 </Col>
                 <Col sm="6">
                 <Label check>
                   <Input type="checkbox" />{' '}
-                  Thyroid disease
+                  Enfermedad de la tiroides
                 </Label>
                 </Col>
                 <Col sm="6">
                 <Label check>
                   <Input type="checkbox" />{' '}
-                  Other
+                  Otra
                 </Label>
+                </Col>
+              </Row>
+              <Row>
+                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+                  <Button
+                    style={{marginLeft: 35}}
+                    onClick={() => this.setState({activeTab: '5'})}
+                  >Siguiente Página</Button>
+                </Col>
+                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+                  <Button
+                    style={{marginLeft: 35}}
+                    onClick={() => this.setState({activeTab: '3'})}
+                  >Página Anterior</Button>
                 </Col>
               </Row>
             </Container>
@@ -631,74 +657,88 @@ class AccountInfo extends Component {
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Angioplasty
+                    Angioplastía
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Appendectomy
+                    Apendectomía
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Back surgery
+                    Cirugía de la espalda
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Gallbladder surgery
+                    Cirugía vesícula biliar
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Heart bypass
+                    Bypass de corazón
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Hernia repair
+                    Reparación de Hernia
                   </Label>
                 </Col>
                 <Col sm="6">
                     <Label check>
                       <Input type="checkbox" />{' '}
-                      Hip replacement
+                      Reemplazo de cadera
                     </Label>
                 </Col>
                 <Col sm="6">
                     <Label check>
                       <Input type="checkbox" />{' '}
-                      Knee surgery
+                      Cirugía de Rodilla
                     </Label>
                 </Col>
                 <Col sm="6">
                     <Label check>
                       <Input type="checkbox" />{' '}
-                      Pacemaker
+                      Marcapaso
                     </Label>
                 </Col>
                 <Col sm="6">
                     <Label check>
                       <Input type="checkbox" />{' '}
-                      Tonsillectomy
+                      Amigdalectomía
                     </Label>
                 </Col>
                 <Col sm="6">
                     <Label check>
                       <Input type="checkbox" />{' '}
-                      Vasectomy
+                      Vasectomía
                     </Label>
                 </Col>
                 <Col sm="6">
                     <Label check>
                       <Input type="checkbox" />{' '}
-                      Other
+                      Otra
                     </Label>
+                </Col>
+              </Row>
+              <Row>
+                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+                  <Button
+                    style={{marginLeft: 35}}
+                    onClick={() => this.setState({activeTab: '6'})}
+                  >Siguiente Página</Button>
+                </Col>
+                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+                  <Button
+                    style={{marginLeft: 35}}
+                    onClick={() => this.setState({activeTab: '4'})}
+                  >Página Anterior</Button>
                 </Col>
               </Row>
             </Container>
@@ -715,19 +755,19 @@ class AccountInfo extends Component {
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Asthma
+                    Asma
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Cancer
+                    Cáncer
                   </Label>
                 </Col>
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Coronary artery disease (cad)
+                    Enfermedad de la Arteria Coronaria
                   </Label>
                 </Col>
                 <Col sm="6">
@@ -739,31 +779,31 @@ class AccountInfo extends Component {
                 <Col sm="6">
                   <Label check>
                     <Input type="checkbox" />{' '}
-                    Heart attack
+                    Ataque al corazón
                   </Label>
                 </Col>
                 <Col sm="6">
                     <Label check>
                       <Input type="checkbox" />{' '}
-                      High cholesterol
+                      Colesterol Alto
                     </Label>
                 </Col>
                 <Col sm="6">
                     <Label check>
                       <Input type="checkbox" />{' '}
-                      Hypertension
+                      Hipertensión
                     </Label>
                 </Col>
                 <Col sm="6">
                     <Label check>
                       <Input type="checkbox" />{' '}
-                      Kidney disease
+                      Enfermedad del riñón
                     </Label>
                 </Col>
                 <Col sm="6">
                     <Label check>
                       <Input type="checkbox" />{' '}
-                      Migraines
+                      Migrañas
                     </Label>
                 </Col>
                 <Col sm="6">
@@ -775,14 +815,28 @@ class AccountInfo extends Component {
                 <Col sm="6">
                     <Label check>
                       <Input type="checkbox" />{' '}
-                      Stroke
+                      Infarto
                     </Label>
                 </Col>
                 <Col sm="6">
                     <Label check>
                       <Input type="checkbox" />{' '}
-                      Other
+                      Otra
                     </Label>
+                </Col>
+              </Row>
+              <Row>
+                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+                  <Button
+                    style={{marginLeft: 35}}
+                    onClick={() => this.setState({activeTab: '7'})}
+                  >Siguiente Página</Button>
+                </Col>
+                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+                  <Button
+                    style={{marginLeft: 35}}
+                    onClick={() => this.setState({activeTab: '5'})}
+                  >Página Anterior</Button>
                 </Col>
               </Row>
             </Container>
@@ -791,10 +845,10 @@ class AccountInfo extends Component {
             <Container>
               <Row>
                 <Col sm="12">
-                  <Label className="mr-sm-2">Have you ever abused any substances or drugs</Label>
+                  <Label className="mr-sm-2">¿Alguna vez ha abusado de sustancias o drogas?</Label>
                   <Label check>
                     <Input type="radio" name="radio1" disabled />{' '}
-                    Yes
+                    Si
                   </Label>
                   <Label check>
                     <Input type="radio" name="radio1" disabled />{' '}
@@ -802,10 +856,10 @@ class AccountInfo extends Component {
                   </Label>
                 </Col>
                 <Col sm="12">
-                  <Label className="mr-sm-2">Do you have a history of psychiatric disorders or hospitalizations</Label>
+                  <Label className="mr-sm-2">¿Tiene historial de enfermedades u hospitalizaciones psiquiátricas?</Label>
                   <Label check>
                     <Input type="radio" name="radio1" disabled />{' '}
-                    Yes
+                    Si
                   </Label>
                   <Label check>
                     <Input type="radio" name="radio1" disabled />{' '}
@@ -813,10 +867,11 @@ class AccountInfo extends Component {
                   </Label>
                 </Col>
                 <Col sm="12">
-                  <Label className="mr-sm-2">Do you have a history of suicidal ideations or attempts</Label>
+                  <Label className="mr-sm-2">¿Tiene historial de planeación o intento de suicidio?</Label>
                   <Label check>
                     <Input type="radio" name="radio1" disabled />{' '}
-                    Yes
+
+                    Si
                   </Label>
                   <Label check>
                     <Input type="radio" name="radio1" disabled />{' '}
@@ -824,15 +879,29 @@ class AccountInfo extends Component {
                   </Label>
                 </Col>
                 <Col sm="12">
-                  <Label className="mr-sm-2">Does your family have a history of suicidal attempts</Label>
+                  <Label className="mr-sm-2">¿Hay historial en su familia de intentos de suicidio?</Label>
                   <Label check>
                     <Input type="radio" name="radio1" disabled />{' '}
-                    Yes
+                    Si
                   </Label>
                   <Label check>
                     <Input type="radio" name="radio1" disabled />{' '}
                     No
                   </Label>
+                </Col>
+              </Row>
+              <Row>
+                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+                  <Button
+                    style={{marginLeft: 35}}
+                    onClick={() => this.setState({activeTab: '8'})}
+                  >Siguiente Página</Button>
+                </Col>
+                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+                  <Button
+                    style={{marginLeft: 35}}
+                    onClick={() => this.setState({activeTab: '6'})}
+                  >Página Anterior</Button>
                 </Col>
               </Row>
             </Container>
@@ -841,50 +910,123 @@ class AccountInfo extends Component {
             <Row>
               <Col sm="6">
                 <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                  <Label for="dob" className="mr-sm-2">Pharmacy Search</Label>
+                  <Label for="dob" className="mr-sm-2">Búsqueda de Farmacias</Label>
                   <Input type="text" name="dob" id="dob" placeholder="" />
                 </FormGroup>
                 <Button
                   onClick={() => this.setState({showPharmResults: true})}
-                >Click me to find something</Button>
+                >Buscar</Button>
               </Col>
               <Col sm="6">
                 {
                   this.state.showPharmResults
-                  ? <div>Show a list of fake pharmacies</div>
+                  ? <div>Listado de Farmacias</div>
                   : ''
                 }
               </Col>
             </Row>
+            <Row>
+              <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+                <Button
+                  style={{marginLeft: 35}}
+                  onClick={() => this.setState({activeTab: '9'})}
+                >Siguiente Página</Button>
+              </Col>
+              <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+                <Button
+                  style={{marginLeft: 35}}
+                  onClick={() => this.setState({activeTab: '7'})}
+                >Página Anterior</Button>
+              </Col>
+            </Row>
           </TabPane>
           <TabPane tabId="9">
+            <Container fluid>
+              <Row>
+                <Col sm="6">
+                  <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+                    <Label for="card" className="mr-sm-2">Número de su tarjeta de crédito</Label>
+                    <Input type="text" name="card" id="card" placeholder="" />
+                  </FormGroup>
+                </Col>
+              </Row>
+              <Row>
+                <Col sm="6">
+                  <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+                    <Label for="expm" className="mr-sm-2">Mes de vencimiento</Label>
+                    <Input type="text" name="expm" id="expm" placeholder="" />
+                  </FormGroup>
+                </Col>
+                <Col sm="6">
+                  <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+                    <Label for="expy" className="mr-sm-2">Año de Vencimiento</Label>
+                    <Input type="text" name="expy" id="card" placeholder="" />
+                  </FormGroup>
+                </Col>
+              </Row>
+            </Container>
             <Row>
-              <Col sm="6">
-                HERE
-
+              <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+                <Button
+                  style={{marginLeft: 35}}
+                  onClick={() => this.setState({activeTab: '10'})}
+                >Siguiente Página</Button>
               </Col>
-              <Col sm="6">
-
+              <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+                <Button
+                  style={{marginLeft: 35}}
+                  onClick={() => this.setState({activeTab: '8'})}
+                >Página Anterior</Button>
               </Col>
             </Row>
           </TabPane>
           <TabPane tabId="10">
-            <Row>
-              <Col sm="6">
-                <Card body>
-                  <CardTitle>Special Title Treatment</CardTitle>
-                  <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                  <Button>Go somewhere</Button>
-                </Card>
-              </Col>
-              <Col sm="6">
-                <Card body>
-                  <CardTitle>Special Title Treatment</CardTitle>
-                  <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                  <Button>Go somewhere</Button>
-                </Card>
-              </Col>
-            </Row>
+          <Container>
+              <Row>
+                <Col sm="12">
+                  <Label className="mr-sm-2">Enviar notificaciones a su correo electrónico</Label>
+                  <Label check>
+                    <Input type="radio" name="radio1" disabled />{' '}
+                    Si
+                  </Label>
+                  <Label check>
+                    <Input type="radio" name="radio1" disabled />{' '}
+                    No
+                  </Label>
+                </Col>
+                <Col sm="12">
+                  <Label className="mr-sm-2">Enviar notificaciones de voz a su celular</Label>
+                  <Label check>
+                    <Input type="radio" name="radio1" disabled />{' '}
+                    Si
+                  </Label>
+                  <Label check>
+                    <Input type="radio" name="radio1" disabled />{' '}
+                    No
+                  </Label>
+                </Col>
+                <Col sm="12">
+                  <Label className="mr-sm-2">Enviar notificaciones por mensaje de texto a su celular</Label>
+                  <Label check>
+                    <Input type="radio" name="radio1" disabled />{' '}
+
+                    Si
+                  </Label>
+                  <Label check>
+                    <Input type="radio" name="radio1" disabled />{' '}
+                    No
+                  </Label>
+                </Col>
+              </Row>
+              <Row>
+                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+                  <Button
+                    style={{marginLeft: 35}}
+                    onClick={() => this.setState({activeTab: '9'})}
+                  >Página Anterior</Button>
+                </Col>
+              </Row>
+            </Container>
           </TabPane>
         </TabContent>
       </div>
