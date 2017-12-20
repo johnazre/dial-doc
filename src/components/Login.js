@@ -8,10 +8,10 @@ type Props = {
   }
 }
 
-class Login extends Component<Props, null> {
+export class Login extends Component<Props, null> {
   render() {
     return (
-      <Container>
+      <Container className="main-wrapper">
         <Row style={{marginTop: '23%'}}>
           <Col lg={{ size: 6, offset: 3 }} style={{ border: '1px solid #c9c5c2', padding: 35, boxShadow: "3px 3px 47px 0px rgba(0,0,0,0.5)"}}>
             <Form>
