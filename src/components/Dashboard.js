@@ -37,21 +37,21 @@ class Dashboard extends Component<Props, null> {
             style={colStyles}
             onClick={() => this.props.history.push('/appointments')}
           >
-            <div className="text-center">View Past Appointments</div>
+            <div className="text-center">Ver historial de consultas</div>
             <FontAwesome className="text-center" name='book' style={faStyles} />
           </Col>
           <Col
             style={colStyles}
             onClick={() => this.props.history.push('/schedule')}
           >
-            <div className="text-center">Schedule a new appointment</div>
+            <div className="text-center">Agendar una cita</div>
             <FontAwesome className="text-center" name='calendar' style={faStyles} />
           </Col>
           <Col
             style={colStyles}
             onClick={() => this.props.history.push('/account-info')}
           >
-            <div className="text-center">View/Change Account Information</div>
+            <div className="text-center">Ver/Modificar su Perfil</div>
             <FontAwesome className="text-center" name='user' style={faStyles} />
           </Col>
         </Row>

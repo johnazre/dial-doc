@@ -63,19 +63,19 @@ class ScheduleAppt extends Component<Props, State> {
       <Container>
         <Row>
           <Col className="text-center" style={{marginTop: 40}}>
-            <h2>Speak with a physician now</h2>
-            <Button onClick={this.toggleModal}>Click here</Button>
+            <h2>Hablar con un médico ahora</h2>
+            <Button onClick={this.toggleModal}>Presione aquí</Button>
           </Col>
         </Row>
         <Modal
           isOpen={this.state.modal}
           toggle={this.toggleModal}
         >
-          <ModalHeader>Visit Details</ModalHeader>
+          <ModalHeader>Detalles de su consulta</ModalHeader>
           <ModalBody>
             <Form onSubmit={this.handleSubmitModal}>
               <FormGroup>
-                <Label for="chiefComplaint">What is your Chief Complaint?</Label>
+                <Label for="chiefComplaint">¿Cuál es el motivo de su consulta?</Label>
                 <Input
                   valid={this.state.complaint.length < 3 ? false : true}
                   type="text"
@@ -93,12 +93,12 @@ class ScheduleAppt extends Component<Props, State> {
               onClick={this.startAppointment}
               disabled={this.state.complaint.length < 3 ? true : false}
             >Do Something</Button>{' '}
-            <Button color="secondary" onClick={this.toggleModal}>Close</Button>
+            <Button color="secondary" onClick={this.toggleModal}>Cerrar</Button>
           </ModalFooter>
         </Modal>
         <Row>
           <Col className="text-center" style={{marginTop: 40}}>
-            <h2>Schedule a future appointment</h2>
+            <h2>Agendar una cita</h2>
           </Col>
         </Row>
         <Row>
@@ -106,7 +106,7 @@ class ScheduleAppt extends Component<Props, State> {
             <Form onSubmit={this.handleSubmit}>
               {/*Provider Select*/}
               <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                <Label for="exampleSelect">Select a doctor: </Label>
+                <Label for="exampleSelect">Seleccione a un médico: </Label>
                 <Input
                   valid={!this.state.provider_id ? false : true}
                   type="select"
@@ -114,13 +114,13 @@ class ScheduleAppt extends Component<Props, State> {
                   value={this.state.provider_id}
                   onChange={(e) => this.setState({provider_id: e.target.value})}
                 >
-                  <option>Select Your Physician</option>
+                  <option>Seleccione a su médico</option>
                   {providersOptions}
                 </Input>
               </FormGroup>
               {/*Appointment Date*/}
               <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                <Label for="appt-date">Choose a Date</Label>
+                <Label for="appt-date">Seleccione una fecha</Label>
                 <Input
                   valid={!this.state.date ? false : true}
                   type="date"
@@ -131,7 +131,7 @@ class ScheduleAppt extends Component<Props, State> {
               </FormGroup>
               {/*Appointment Time*/}
               <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                <Label for="appt-time">Choose a Time</Label>
+                <Label for="appt-time">Seleccione la hora</Label>
                 <Input
                   valid={!this.state.time ? false : true}
                   type="time"
@@ -140,11 +140,11 @@ class ScheduleAppt extends Component<Props, State> {
                   onChange={(e) => this.setState({time: e.target.value})}
                 />
               </FormGroup>
-              <Button type="submit" style={{marginTop: 15}}>Submit</Button>
+              <Button type="submit" style={{marginTop: 15}}>Aceptar</Button>
             </Form>
             {this.state.invalid ?
               <Alert color="danger">
-                Something is wrong with what you are trying to submit. Make sure that all of the fields are filled out!
+                Algo está faltando en la información que está tratando de ingresar. Por favor verifique que todos los campos estén llenos.
               </Alert>
               : null}
           </Col>

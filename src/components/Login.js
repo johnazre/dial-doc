@@ -20,10 +20,10 @@ export class Login extends Component<Props, null> {
                 <Input type="email" id="email" />
               </FormGroup>
               <FormGroup>
-                <Label for="password">Password</Label>
+                <Label for="password">Contraseña</Label>
                 <Input type="password" id="password" />
               </FormGroup>
-              <Button onClick={() => this.props.history.push('/dashboard')}>Submit</Button>
+              <Button onClick={() => this.props.history.push('/dashboard')}>Ingresar</Button>
             </Form>
           </Col>
         </Row>

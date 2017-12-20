@@ -31,18 +31,18 @@ class PastAppointmentsList extends Component<Props, null> {
     });
     return (
       <div>
-        <h2 style={{marginTop: 20}}>Past Appointments</h2>
+        <h2 style={{marginTop: 20}}>Historial de consultas</h2>
         <Row>
           <Col>
             <FormGroup>
-              <Label for="sortAppts">Sort By:</Label>
+              <Label for="sortAppts">Ordernar Por:</Label>
               <Input
                 type="select"
                 id="sortAppts"
                 onChange={(e) => this.props.sortAppts(e.target.value)}
               >
-                <option value="desc">Newest to Oldest</option>
-                <option value="asc">Oldest to Newest</option>
+                <option value="desc">Más reciente al menos reciente</option>
+                <option value="asc">Menos reciente al más reciente</option>
               </Input>
             </FormGroup>
           </Col>
