@@ -1,15 +1,7 @@
 import React, { Component } from 'react'
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col, Container } from 'reactstrap';
-import classnames from 'classnames';
-import {Form, FormGroup, Label, Input } from 'reactstrap';
-
-/*class AccountInfo extends Component {
-  render () {
-    return (
-      <div>Account Info Component</div>
-    )
-  }
-}*/
+import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col, Container } from 'reactstrap'
+import classnames from 'classnames'
+import {Form, FormGroup, Label, Input } from 'reactstrap'
 
 class AccountInfo extends Component {
   state = {
@@ -21,7 +13,7 @@ class AccountInfo extends Component {
     if (this.state.activeTab !== tab) {
       this.setState({
         activeTab: tab
-      });
+      })
     }
   }
 
@@ -110,7 +102,7 @@ class AccountInfo extends Component {
             </NavLink>
           </NavItem>
         </Nav>
-        <TabContent activeTab={this.state.activeTab}>
+        <TabContent activeTab={this.state.activeTab} style={{marginTop: 20}}>
           <TabPane tabId="1">
             <Container fluid>
               <Row>
@@ -319,14 +311,14 @@ class AccountInfo extends Component {
                   </Label>
                 </Col>
               </Row>
-              <Row>
-                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+              <Row className="text-center">
+                <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
                     onClick={() => this.setState({activeTab: '3'})}
                   >Siguiente Página</Button>
                 </Col>
-                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+                <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
                     onClick={() => this.setState({activeTab: '1'})}
@@ -531,14 +523,14 @@ class AccountInfo extends Component {
                 </Label>
                 </Col>
               </Row>
-              <Row>
-                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+              <Row className="text-center">
+                <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
                     onClick={() => this.setState({activeTab: '4'})}
                   >Siguiente Página</Button>
                 </Col>
-                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+                <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
                     onClick={() => this.setState({activeTab: '2'})}
@@ -635,14 +627,14 @@ class AccountInfo extends Component {
                 </Label>
                 </Col>
               </Row>
-              <Row>
-                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+              <Row className="text-center">
+                <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
                     onClick={() => this.setState({activeTab: '5'})}
                   >Siguiente Página</Button>
                 </Col>
-                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+                <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
                     onClick={() => this.setState({activeTab: '3'})}
@@ -727,14 +719,14 @@ class AccountInfo extends Component {
                     </Label>
                 </Col>
               </Row>
-              <Row>
-                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+              <Row className="text-center">
+                <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
                     onClick={() => this.setState({activeTab: '6'})}
                   >Siguiente Página</Button>
                 </Col>
-                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+                <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
                     onClick={() => this.setState({activeTab: '4'})}
@@ -825,14 +817,14 @@ class AccountInfo extends Component {
                     </Label>
                 </Col>
               </Row>
-              <Row>
-                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+              <Row className="text-center">
+                <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
                     onClick={() => this.setState({activeTab: '7'})}
                   >Siguiente Página</Button>
                 </Col>
-                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+                <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
                     onClick={() => this.setState({activeTab: '5'})}
@@ -847,57 +839,57 @@ class AccountInfo extends Component {
                 <Col sm="12">
                   <Label className="mr-sm-2">¿Alguna vez ha abusado de sustancias o drogas?</Label>
                   <Label check>
-                    <Input type="radio" name="radio1" disabled />{' '}
+                    <Input type="radio" name="radio1" />{' '}
                     Si
                   </Label>
                   <Label check>
-                    <Input type="radio" name="radio1" disabled />{' '}
+                    <Input type="radio" name="radio1" />{' '}
                     No
                   </Label>
                 </Col>
                 <Col sm="12">
                   <Label className="mr-sm-2">¿Tiene historial de enfermedades u hospitalizaciones psiquiátricas?</Label>
                   <Label check>
-                    <Input type="radio" name="radio1" disabled />{' '}
+                    <Input type="radio" name="radio1" />{' '}
                     Si
                   </Label>
                   <Label check>
-                    <Input type="radio" name="radio1" disabled />{' '}
+                    <Input type="radio" name="radio1" />{' '}
                     No
                   </Label>
                 </Col>
                 <Col sm="12">
                   <Label className="mr-sm-2">¿Tiene historial de planeación o intento de suicidio?</Label>
                   <Label check>
-                    <Input type="radio" name="radio1" disabled />{' '}
+                    <Input type="radio" name="radio1" />{' '}
 
                     Si
                   </Label>
                   <Label check>
-                    <Input type="radio" name="radio1" disabled />{' '}
+                    <Input type="radio" name="radio1" />{' '}
                     No
                   </Label>
                 </Col>
                 <Col sm="12">
                   <Label className="mr-sm-2">¿Hay historial en su familia de intentos de suicidio?</Label>
                   <Label check>
-                    <Input type="radio" name="radio1" disabled />{' '}
+                    <Input type="radio" name="radio1" />{' '}
                     Si
                   </Label>
                   <Label check>
-                    <Input type="radio" name="radio1" disabled />{' '}
+                    <Input type="radio" name="radio1" />{' '}
                     No
                   </Label>
                 </Col>
               </Row>
-              <Row>
-                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+              <Row className="text-center">
+                <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
                     onClick={() => this.setState({activeTab: '8'})}
                   >Siguiente Página</Button>
                 </Col>
-                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+                <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
                     onClick={() => this.setState({activeTab: '6'})}
@@ -925,14 +917,14 @@ class AccountInfo extends Component {
                 }
               </Col>
             </Row>
-            <Row>
-              <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+            <Row className="text-center">
+              <Col sm={{size: 6}}  style={{marginTop: 20}}>
                 <Button
                   style={{marginLeft: 35}}
                   onClick={() => this.setState({activeTab: '9'})}
                 >Siguiente Página</Button>
               </Col>
-              <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+              <Col sm={{size: 6}}  style={{marginTop: 20}}>
                 <Button
                   style={{marginLeft: 35}}
                   onClick={() => this.setState({activeTab: '7'})}
@@ -965,14 +957,14 @@ class AccountInfo extends Component {
                 </Col>
               </Row>
             </Container>
-            <Row>
-              <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+            <Row className="text-center">
+              <Col sm={{size: 6}}  style={{marginTop: 20}}>
                 <Button
                   style={{marginLeft: 35}}
                   onClick={() => this.setState({activeTab: '10'})}
                 >Siguiente Página</Button>
               </Col>
-              <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+              <Col sm={{size: 6}}  style={{marginTop: 20}}>
                 <Button
                   style={{marginLeft: 35}}
                   onClick={() => this.setState({activeTab: '8'})}
@@ -986,40 +978,40 @@ class AccountInfo extends Component {
                 <Col sm="12">
                   <Label className="mr-sm-2">Enviar notificaciones a su correo electrónico</Label>
                   <Label check>
-                    <Input type="radio" name="radio1" disabled />{' '}
+                    <Input type="radio" name="radio1" />{' '}
                     Si
                   </Label>
                   <Label check>
-                    <Input type="radio" name="radio1" disabled />{' '}
+                    <Input type="radio" name="radio1" />{' '}
                     No
                   </Label>
                 </Col>
                 <Col sm="12">
                   <Label className="mr-sm-2">Enviar notificaciones de voz a su celular</Label>
                   <Label check>
-                    <Input type="radio" name="radio1" disabled />{' '}
+                    <Input type="radio" name="radio1" />{' '}
                     Si
                   </Label>
                   <Label check>
-                    <Input type="radio" name="radio1" disabled />{' '}
+                    <Input type="radio" name="radio1" />{' '}
                     No
                   </Label>
                 </Col>
                 <Col sm="12">
                   <Label className="mr-sm-2">Enviar notificaciones por mensaje de texto a su celular</Label>
                   <Label check>
-                    <Input type="radio" name="radio1" disabled />{' '}
+                    <Input type="radio" name="radio1" />{' '}
 
                     Si
                   </Label>
                   <Label check>
-                    <Input type="radio" name="radio1" disabled />{' '}
+                    <Input type="radio" name="radio1" />{' '}
                     No
                   </Label>
                 </Col>
               </Row>
               <Row>
-                <Col sm={{size: 2, offset: 10}}  style={{marginTop: 20}}>
+                <Col sm={{size: 2, offset: 8}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
                     onClick={() => this.setState({activeTab: '9'})}
@@ -1030,7 +1022,7 @@ class AccountInfo extends Component {
           </TabPane>
         </TabContent>
       </div>
-    );
+    )
   }
 }
 
