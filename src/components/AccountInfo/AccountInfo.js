@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col, Container } from 'reactstrap'
 import classnames from 'classnames'
-import {Form, FormGroup, Label, Input } from 'reactstrap'
+import { Form, FormGroup, Label, Input } from 'reactstrap'
+import PharmacyList from './PharmacyList'
 
 class AccountInfo extends Component {
   state = {
@@ -315,14 +316,14 @@ class AccountInfo extends Component {
                 <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
-                    onClick={() => this.setState({activeTab: '3'})}
-                  >Siguiente Página</Button>
+                    onClick={() => this.setState({activeTab: '1'})}
+                  >Página Anterior</Button>
                 </Col>
                 <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
-                    onClick={() => this.setState({activeTab: '1'})}
-                  >Página Anterior</Button>
+                    onClick={() => this.setState({activeTab: '3'})}
+                    >Siguiente Página</Button>
                 </Col>
               </Row>
             </Container>
@@ -527,14 +528,14 @@ class AccountInfo extends Component {
                 <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
-                    onClick={() => this.setState({activeTab: '4'})}
-                  >Siguiente Página</Button>
+                    onClick={() => this.setState({activeTab: '2'})}
+                  >Página Anterior</Button>
                 </Col>
                 <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
-                    onClick={() => this.setState({activeTab: '2'})}
-                  >Página Anterior</Button>
+                    onClick={() => this.setState({activeTab: '4'})}
+                    >Siguiente Página</Button>
                 </Col>
               </Row>
             </Container>
@@ -631,14 +632,14 @@ class AccountInfo extends Component {
                 <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
-                    onClick={() => this.setState({activeTab: '5'})}
-                  >Siguiente Página</Button>
+                    onClick={() => this.setState({activeTab: '3'})}
+                  >Página Anterior</Button>
                 </Col>
                 <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
-                    onClick={() => this.setState({activeTab: '3'})}
-                  >Página Anterior</Button>
+                    onClick={() => this.setState({activeTab: '5'})}
+                    >Siguiente Página</Button>
                 </Col>
               </Row>
             </Container>
@@ -723,14 +724,14 @@ class AccountInfo extends Component {
                 <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
-                    onClick={() => this.setState({activeTab: '6'})}
-                  >Siguiente Página</Button>
+                    onClick={() => this.setState({activeTab: '4'})}
+                  >Página Anterior</Button>
                 </Col>
                 <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
-                    onClick={() => this.setState({activeTab: '4'})}
-                  >Página Anterior</Button>
+                    onClick={() => this.setState({activeTab: '6'})}
+                    >Siguiente Página</Button>
                 </Col>
               </Row>
             </Container>
@@ -821,14 +822,14 @@ class AccountInfo extends Component {
                 <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
-                    onClick={() => this.setState({activeTab: '7'})}
-                  >Siguiente Página</Button>
+                    onClick={() => this.setState({activeTab: '5'})}
+                  >Página Anterior</Button>
                 </Col>
                 <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
-                    onClick={() => this.setState({activeTab: '5'})}
-                  >Página Anterior</Button>
+                    onClick={() => this.setState({activeTab: '7'})}
+                    >Siguiente Página</Button>
                 </Col>
               </Row>
             </Container>
@@ -886,14 +887,14 @@ class AccountInfo extends Component {
                 <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
-                    onClick={() => this.setState({activeTab: '8'})}
-                  >Siguiente Página</Button>
+                    onClick={() => this.setState({activeTab: '6'})}
+                  >Página Anterior</Button>
                 </Col>
                 <Col sm={{size: 6}}  style={{marginTop: 20}}>
                   <Button
                     style={{marginLeft: 35}}
-                    onClick={() => this.setState({activeTab: '6'})}
-                  >Página Anterior</Button>
+                    onClick={() => this.setState({activeTab: '8'})}
+                    >Siguiente Página</Button>
                 </Col>
               </Row>
             </Container>
@@ -901,18 +902,20 @@ class AccountInfo extends Component {
           <TabPane tabId="8">
             <Row>
               <Col sm="6">
-                <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                  <Label for="dob" className="mr-sm-2">Búsqueda de Farmacias</Label>
-                  <Input type="text" name="dob" id="dob" placeholder="" />
-                </FormGroup>
-                <Button
-                  onClick={() => this.setState({showPharmResults: true})}
-                >Buscar</Button>
+                <Form inline>
+                  <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+                    <Label for="dob" className="mr-sm-2">Búsqueda de Farmacias</Label>
+                    <Input type="text" name="dob" id="dob" placeholder="" />
+                  </FormGroup>
+                  <Button
+                    onClick={() => this.setState({showPharmResults: true})}
+                  >Buscar</Button>
+                </Form>
               </Col>
               <Col sm="6">
                 {
                   this.state.showPharmResults
-                  ? <div>Listado de Farmacias</div>
+                  ? <PharmacyList />
                   : ''
                 }
               </Col>
@@ -921,14 +924,14 @@ class AccountInfo extends Component {
               <Col sm={{size: 6}}  style={{marginTop: 20}}>
                 <Button
                   style={{marginLeft: 35}}
-                  onClick={() => this.setState({activeTab: '9'})}
-                >Siguiente Página</Button>
+                  onClick={() => this.setState({activeTab: '7'})}
+                >Página Anterior</Button>
               </Col>
               <Col sm={{size: 6}}  style={{marginTop: 20}}>
                 <Button
                   style={{marginLeft: 35}}
-                  onClick={() => this.setState({activeTab: '7'})}
-                >Página Anterior</Button>
+                  onClick={() => this.setState({activeTab: '9'})}
+                  >Siguiente Página</Button>
               </Col>
             </Row>
           </TabPane>
@@ -937,9 +940,18 @@ class AccountInfo extends Component {
               <Row>
                 <Col sm="6">
                   <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                    <Label for="card" className="mr-sm-2">Número de su tarjeta de crédito</Label>
+                    <Label for="card" className="mr-sm-2">
+                      Número de su tarjeta de crédito
+                      {'         '}
+                      <img
+                        src="https://storage.j0.hn/credit-card-logos.png"
+                        alt="cc"
+                        style={{width:200}}
+                      />
+                    </Label>
                     <Input type="text" name="card" id="card" placeholder="" />
                   </FormGroup>
+
                 </Col>
               </Row>
               <Row>
@@ -961,14 +973,14 @@ class AccountInfo extends Component {
               <Col sm={{size: 6}}  style={{marginTop: 20}}>
                 <Button
                   style={{marginLeft: 35}}
-                  onClick={() => this.setState({activeTab: '10'})}
-                >Siguiente Página</Button>
+                  onClick={() => this.setState({activeTab: '8'})}
+                >Página Anterior</Button>
               </Col>
               <Col sm={{size: 6}}  style={{marginTop: 20}}>
                 <Button
                   style={{marginLeft: 35}}
-                  onClick={() => this.setState({activeTab: '8'})}
-                >Página Anterior</Button>
+                  onClick={() => this.setState({activeTab: '10'})}
+                  >Siguiente Página</Button>
               </Col>
             </Row>
           </TabPane>
