@@ -942,7 +942,6 @@ class AccountInfo extends Component {
                   <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                     <Label for="card" className="mr-sm-2">
                       Número de su tarjeta de crédito
-                      {'         '}
                       <img
                         src="https://storage.j0.hn/credit-card-logos.png"
                         alt="cc"
@@ -958,13 +957,17 @@ class AccountInfo extends Component {
                 <Col sm="6">
                   <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                     <Label for="expm" className="mr-sm-2">Mes de vencimiento</Label>
-                    <Input type="text" name="expm" id="expm" placeholder="" />
+                      <Input type="select" name="expy" id="card" placeholder="">
+                        {[1,2,3,4,5,6,7,8,9,10,11,12].map(mo => <option>{mo}</option>)}
+                      </Input>
                   </FormGroup>
                 </Col>
                 <Col sm="6">
                   <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                     <Label for="expy" className="mr-sm-2">Año de Vencimiento</Label>
-                    <Input type="text" name="expy" id="card" placeholder="" />
+                    <Input type="select" name="expy" id="card" placeholder="">
+                      {[2017,2018,2019,2020,2021].map(year => <option>{year}</option>)}
+                    </Input>
                   </FormGroup>
                 </Col>
               </Row>
